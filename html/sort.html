@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-3.3.1.min.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#req").click( function(){
+                $.ajax(
+                    {
+                        data : { "user":"x" },
+                        headers : {
+                            "a":"b"
+                        },
+                        type : 'POST',
+                        body : JSON.stringify({
+                            id: 1
+                            }),
+                        url : 'https://jsonplaceholder.typicode.com/posts',
+                        success : function( data )
+                        {
+                            // $.each( data , function( i , element )
+                            //  {
+                            //     console.log( data[i].body,"\n",element.body );
+                            //  });
+                            console.log( data );
+                        },
+                        error :function( msg )
+                        {
+                            console.log(msg);
+                        }
+                    });
+            });
+        });
+
+        function getResponse()
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function()
+            {
+                if( xhr.readyState === 4 && xhr.status === 200 )
+                {
+                    console.log( JSON.parse(xhr.responseText) );
+                }
+                console.log( xhr.readyState );
+            };
+            xhr.open( "GET" , "https://jsonplaceholder.typicode.com/posts" , true );
+            xhr.setRequestHeader("Content-Type","text/plain;charset=UTF-8");
+           }
+
+    </script>
+</head>
+
+<body>
+    <h1>XMLHttpRequest and ajax</h1>
+    <button type="button" name="req" id="req" >Click here</button>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .home {
+            background-image: url('../image/float-layout-bg.png');
+            background-attachment: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+            position: relative;
+        }
+
+        .home-txt-div {
+            font-family: monospace;
+            font-size: 5em;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+        }
+        img
+        {
+            width: 25%;
+            height: 70%;
+            padding: 0 2% 0 2%;
+        }
+        .cover-box
+        {
+            height:30%;
+            margin: 0% 2% 0% 2%;
+            overflow: scroll;
+            padding: 2% 0 0 0 ;
+        }
+        .cover-box-heading
+        {
+            font-size: 4em;
+            color:#fbc300;
+            padding: 0 2% 0 2%;
+        }
+        .layout-head
+        {
+            letter-spacing: 10px;
+            height: 10%;
+            font-family:monospace;
+            font-size: 4em;
+            background-color: #00381c;
+            color: white;
+            padding: 1% 2% 0 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <div class="home-txt-div">Learn Float</div>
+    </div>
+    <div style="height: 100vh;background-color: black;">
+        <div class="layout-head">
+            Article
+        </div>
+        <div class="cover-box" style="background-color: #00a090;">
+            <img src="../image/float-1-img.png" style="float:left;">
+            <div class="cover-box-heading" style="float:right;">HELLO</div>
+            <div style="text-align: justify;color: #7be9e2;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam omnis
+                eaque adquis recusandae, nobis quidem temporibus quasi adipisci beatae aut eum nisi soluta ducimus optio
+                similique ipsa asperiores sint. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos sint ex
+                optio exercitationem sequi esse enim autem culpa dolor provident? Sunt nemo esse asperiores enim
+                voluptatibus sint explicabo obcaecati delectus magni? Assumenda, recusandae voluptatem! Fugiat
+                dignissimos nobis dolore architecto assumenda. Quod laborum doloribus harum ea. Excepturi deleniti,
+                accusantium, voluptatibus molestiae inventore dignissimos illo facilis perspiciatis saepe cum
+                voluptates iste repudiandae maiores consequatur delectus commodi sequi necessitatibus molestias hic sit
+                laborum aliquam adipisci. Ullam officiis possimus cupiditate accusamus ducimus cumque ratione, dicta,
+                impedit aliquam quas rem deserunt aperiam dolorem! Eligendi sint accusantium odit fugit nulla error
+                molestias architecto deleniti aliquam illum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aut similique eligendi necessitatibus tempore libero inventore eveniet optio ad sit. Officiis et
+                sapiente iure est dignissimos illum at, illo vero aut nesciunt sunt minima quaerat in. Voluptates,
+                expedita labore! Explicabo dolorum non numquam accusamus in odio iste aut voluptate esse cum velit
+                possimus, nam hic voluptas inventore eum soluta sit ratione. Cum libero animi voluptatum saepe deserunt
+                obcaecati non accusantium facilis alias culpa, optio deleniti quasi nihil nemo. Consequatur animi
+                accusamus tempore fugiat quae vero, dolorem ipsam. Nam explicabo similique deserunt ullam fugiat facere
+                dolores accusamus, dolor assumenda vero voluptas nemo! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Non, sunt iusto. Dolore, blanditiis? Itaque magnam magni quaerat debitis rem id.
+            </div>
+        </div>
+        <div class="cover-box" style="background-color: #94368e;">
+            <div class="cover-box-heading" style="float:left;">EVERY ONE</div>
+            <img src="../image/float-3.png"  style="float:right;">
+            <div style="text-align: justify;color: #efefef;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam omnis
+                eaque quis recusandae, nobis quidem temporibus quasi adipisci beatae aut eum nisi soluta ducimus optio
+                similique ipsa asperiores sint. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos sint ex
+                optio exercitationem sequi esse enim autem culpa dolor provident? Sunt nemo esse asperiores enim
+                voluptatibus sint explicabo obcaecati delectus magni? Assumenda, recusandae voluptatem! Fugiat
+                dignissimos nobis dolore architecto assumenda. Quod laborum doloribus harum ea. Excepturi deleniti,
+                accusantium, voluptatibus molestiae inventore dignissimos illo facilis perspiciatis saepe cum
+                voluptates iste repudiandae maiores consequatur delectus commodi sequi necessitatibus molestias hic sit
+                laborum aliquam adipisci. Ullam officiis possimus cupiditate accusamus ducimus cumque ratione, dicta,
+                impedit aliquam quas rem deserunt aperiam dolorem! Eligendi sint accusantium odit fugit nulla error
+                molestias architecto deleniti aliquam illum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aut similique eligendi necessitatibus tempore libero inventore eveniet optio ad sit. Officiis et
+                sapiente iure est dignissimos illum at, illo vero aut nesciunt sunt minima quaerat in. Voluptates,
+                expedita labore! Explicabo dolorum non numquam accusamus in odio iste aut voluptate esse cum velit
+                possimus, nam hic voluptas inventore eum soluta sit ratione. Cum libero animi voluptatum saepe deserunt
+                obcaecati non accusantium facilis alias culpa, optio deleniti quasi nihil nemo. Consequatur animi
+                accusamus tempore fugiat quae vero, dolorem ipsam.  rem id.
+            </div>
+        </div>
+        <div class="cover-box" style="background-color: #8fa5b5;">
+            <img src="../image/float-2-img.jpg" style="float:left;">
+            <div class="cover-box-heading" style="float:right;">LET's ROCK</div>
+            <div style="text-align: justify;color: #000000;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Magnam omniseaque quis recusandae, nobis quidem temporibus quasi adipisci beatae aut eum nisi soluta ducimus optio
+                similique ipsa asperiores sint. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos sint ex
+                optio exercitationem sequi esse enim autem culpa dolor provident? Sunt nemo esse asperiores enim
+                voluptatibus sint explicabo obcaecati delectus magni? Assumenda, recusandae voluptatem! Fugiat
+                dignissimos nobis dolore architecto assumenda. Quod laborum doloribus harum ea. Excepturi deleniti,
+                accusantium, voluptatibus molestiae inventore dignissimos illo facilis perspiciatis saepe cum
+                voluptates iste repudiandae maiores consequatur delectus commodi sequi necessitatibus molestias hic sit
+                laborum aliquam adipisci. Ullam officiis possimus cupiditate accusamus ducimus cumque ratione, dicta,
+                impedit aliquam quas rem deserunt aperiam dolorem! Eligendi sint accusantium odit fugit nulla error
+                molestias architecto deleniti aliquam illum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aut similique eligendi necessitatibus tempore libero inventore eveniet optio ad sit. Officiis et
+                sapiente iure est dignissimos illum at, illo vero aut nesciunt sunt minima quaerat in. Voluptates,
+                expedita labore! Explicabo dolorum non numquam accusamus in odio iste aut voluptate esse cum velit
+                possimus, nam hic voluptas inventore eum soluta sit ratione. Cum libero animi voluptatum saepe deserunt
+                obcaecati non accusantium facilis alias culpa, optio deleniti quasi nihil nemo. Consequatur animi
+                accusamus tempore fugiat quae vero, dolorem ipsam.  rem id.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
