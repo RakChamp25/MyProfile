@@ -1,29 +1,29 @@
 
-function close_view_modals() {
+function closeViewModals() {
     document.getElementById('modal_view_tag').setAttribute("style", "display:none;");
     document.getElementById('content').setAttribute("style", "filter: none;-webkit-filter: none;");
     document.getElementById('about').setAttribute("style", "filter: none;-webkit-filter: none;");
 }
-function get_modal_id() {
+function getModalId() {
     document.getElementById('modal_view_tag').setAttribute("style", "display:block");
     document.getElementById('content').setAttribute("style", " filter: blur(8px);-webkit-filter: blur(8px);");
     document.getElementById('about').setAttribute("style", " filter: blur(8px);-webkit-filter: blur(8px);");
     var wrapToModal = document.getElementById("modal-content");
     return wrapToModal;
 }
-function show_profile() {
-    get_modal_id().innerHTML = `
+function showProfile() {
+    getModalId().innerHTML = `
     <table cellspacing='15' align='center' cellpadding='5' width='90%' style='text-align:left;'>
         <tr><td>Name</td><td>: Ajith Kannan</td></tr><tr><td>Email</td><td>: ajithkannan.r@zohocorp.com</td></tr>
         <tr><td>Mobile</td><td>: 7871107813</td></tr><tr><td>Date of Birth</td><td>: 25-Aug-1997</td></tr>
     </table>
     `;
 }
-function show_modal_image() {
-    get_modal_id().innerHTML = "<img src='../image/IMG_20180621_090150153_HDR.jpg' style=' border: 2px solid #440311;margin-left:2%;margin-top:2%;'  width='500px'  height='300vh'>";
+function showModalImage() {
+    getModalId().innerHTML = "<img src='../image/IMG_20180621_090150153_HDR.jpg' style=' border: 2px solid #440311;margin-left:2%;margin-top:2%;'  width='500px'  height='300vh'>";
 }
-function show_academics() {
-    get_modal_id().innerHTML = `
+function showAcademics() {
+    getModalId().innerHTML = `
     <dl>
         <dt>Under Graduate</dt>
         <dd><ul><li>BE CSE - Sri Krishna College of Technology(2015-2019)</li></ul></dd>
@@ -33,8 +33,8 @@ function show_academics() {
     </dl>
     `;
 }
-function show_acheivements() {
-    get_modal_id().innerHTML = `
+function showAcheivements() {
+    getModalId().innerHTML = `
     <ul>
         <li>Won a <strong>code strom</strong> in Dhruvafest at KCT.</li>
         <br><br>
@@ -46,15 +46,15 @@ function show_acheivements() {
     </ul>
     `;
 }
-function show_projects() {
-    get_modal_id().innerHTML = `
+function showProjects() {
+    getModalId().innerHTML = `
         <dl>
             <dt>Library Management System</dt>
             <dd><ul><li style='text-align:justify;'>Library Management System is a software used to manages the catalog of a library. This helps to keep the records of whole transactions of the books available in the library.Library Management System which is very easy to use and fulfills all the requirement of a librarian. There are many features which helps librarian to keep records of available books as well as issued books. This software is available in both mode i.e. web-based or local host based</li></ul></dd>
         </dl>
         `;
 }
-function showinconsole() {
+function showInConsole() {
     console.log("LastName : " + document.getElementById("myform").elements.namedItem("lastname").value);
     console.log("FirstName : " + document.getElementById("myform").elements.namedItem("firstname").value);
     console.log("MiddleName : " + document.getElementById("myform").elements.namedItem("middlename").value);
