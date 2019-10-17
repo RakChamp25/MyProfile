@@ -11,11 +11,8 @@
 }
 html,body{
     height:100%;
-<<<<<<< HEAD
    padding: 5%;
-=======
    width:100%;
->>>>>>> feature-c
 }
 body.b
 {
@@ -156,10 +153,6 @@ hr::after {
       margin-left: 22%;
       margin-top: 10%; 
   }
-  /* dt
-  {
-      font-weight: bolder; 
-  } */
   li
   {
       list-style: circle;
@@ -171,15 +164,6 @@ hr::after {
       margin: 10%;
       font-family: 'Tangerine',cursive;
   }
-
-
-/* @media (max-width:1444px)
-{
-   img{
-       height:100px;
-       width:100px;
-   }
-} */
 
 b
 {
