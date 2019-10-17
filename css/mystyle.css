@@ -283,15 +283,12 @@ b
     color: wheat;
     font-size: 2em;
     font-family: monospace;
-    position: relative;
-    left: 5%;
-    top:10%;
     border: 5px solid white;
     border-radius: 6%;
-    padding: 1%;
+    padding: 10px 0;
     width: 80%;
     background-color: #111111;
-    height: 6%;
+    margin: 20px 0 0 20px;
 }
 .knowmore:hover
 {
@@ -300,15 +297,8 @@ b
 .knowmore-img
 {
     background-color:aliceblue;
-    position: absolute;
-    top:-20%;
-}
-.knowmore-txt
-{
-    position:absolute;
-    top:25%;
-    left: 30%;
-
+    float: left;
+    margin: 5px;
 }
 .rect-text {
     position: relative;
