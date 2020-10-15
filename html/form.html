@@ -1,106 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/mystyle.css">
-    <script src="../js/myscript.js" type="text/javascript" ></script>
+    <link rel="stylesheet" href="../css/mystyle.css" />
+    <script src="../js/myscript.js" type="text/javascript"></script>
     <style>
-        .bg_color
-        {
-            background-color:orange;
-        }
-        tr.row_border td
-        {
-            border-bottom: 4px solid  #705984;
-        }
-        td
-        {
-            padding: 1% 0.5% 0.5% 0.5%;
-            width: 25%;
-        }
-        tr.input_box td input[type=text],tr.input_box td textarea ,  tr.input_box td input[type=date] , tr.input_box td input[type=email]
-        {
-            font-size: 0.8em;
-            border-bottom: 2px solid black;
-            border-top: transparent;
-            border-left: transparent;
-            border-right: transparent;
-            width: 90%;
-        }
-        .border_right
-        {
-            border-right:4px solid  #705984;
-        }
-
+      .bg_color {
+        background-color: orange;
+      }
+      tr.row_border td {
+        border-bottom: 4px solid #705984;
+      }
+      td {
+        padding: 1% 0.5% 0.5% 0.5%;
+        width: 25%;
+      }
+      tr.input_box td input[type="text"],
+      tr.input_box td textarea,
+      tr.input_box td input[type="date"],
+      tr.input_box td input[type="email"] {
+        font-size: 0.8em;
+        border-bottom: 2px solid black;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        width: 90%;
+      }
+      .border_right {
+        border-right: 4px solid #705984;
+      }
     </style>
-</head>
-<body style="margin:0% 3% 0% 3%;color: #705984;background-color:antiquewhite;width: 100vw;height: 100vh;">
-    <div >
-        <div style="text-align:center;padding:2% 2% 5% 0;font-size:4em;font-weight: bold;">
-            Application Form
-        </div>
-        <form action="" method="POST" name="myform" id="myform" onsubmit="showinconsole();" >
-            <table style="text-align:left;font-size:1.5em;width:80%;border-collapse: collapse;" align="center">
-                <tr class="bg_color row_border">
-                    <td colspan="4">Please Print clearly</td>
-                </tr>
-                <tr>
-                    <td>Your Last Name</td>
-                    <td>First Name</td>
-                    <td class="border_right">Middle Name</td>
-                    <td class="bg_color">Social Security Number</td>
-                </tr>
-                <tr class="row_border input_box">
-                    <td><input type="text" name="lastname" id="lastname" required /></td>
-                    <td><input type="text" name="firstname" id="firstname" required /></td>
-                    <td class="border_right"><input type="text" name="middlename" id="middlename" required /></td>
-                    <td><input type="text" name="securityNumber" id="securityNumber" required /></td>
-                </tr>
-                <tr>
-                    <td colspan="3" class="border_right">Address</td>
-                    
-                    <td class="bg_color">Sex</td>
-                </tr>
-                <tr class="row_border input_box">
-                    <td colspan="3" class="border_right"> <textarea name="Address" id="Address" cols="10" rows="3" required ></textarea> </td>
-                    <td>  
-                        <input type="radio" id="gender" name="gender" value="male" checked> Male<br>
-                        <input type="radio" id="gender" name="gender" value="female"> Female<br>
-                        <input type="radio" id="gender" name="gender" value="other"> Other  
-                    </td>
-                </tr>
-                <tr>
-                    <td>City</td>
-                    <td>State</td>
-                    <td class="border_right">ZIP</td>
-                    <td class="bg_color">Date of Birth</td>
-                </tr>
-                <tr class="input_box row_border">
-                    <td><input type="text" name="city" id="city" required /> </td>
-                    <td><input type="text" name="state" id="state" required /></td>
-                    <td class="border_right"><input type="text" name="zip" id="zip" required /></td>
-                    <td><input type="date" name="date" id="date" required /></td>
-                </tr>
-                <tr>
-                    <td>Mobile</td>
-                    <td>Email</td>
-                    <td class="border_right">Medicare Claim number</td>
-                    <td class="bg_color">Insurance Number</td>
-                </tr>
-                <tr class="input_box row_border"> 
-                    <td><input type="text" name="mobile" id="mobile" required /></td>
-                    <td><input type="email" name="email" id="email" required /></td>
-                    <td class="border_right"><input type="text" name="claim" id="claim" required /></td>
-                    <td><input type="text" name="insurance" id="insurance"required /></td>
-                </tr>
-                <tr>
-                    <td colspan="4" align="center"><input type="submit" value="Submit"></td>   
-                </tr>            
-            </table>
-        </form>
+  </head>
+  <body
+    style="
+      margin: 0% 3% 0% 3%;
+      color: #705984;
+      background-color: antiquewhite;
+      width: 100vw;
+      height: 100vh;
+    "
+  >
+    <div>
+      <div
+        style="
+          text-align: center;
+          padding: 2% 2% 5% 0;
+          font-size: 4em;
+          font-weight: bold;
+        "
+      >
+        Application Form
+      </div>
+      <form
+        action=""
+        method="POST"
+        name="myform"
+        id="myform"
+        onsubmit="showinconsole();"
+      >
+        <table
+          style="
+            text-align: left;
+            font-size: 1.5em;
+            width: 80%;
+            border-collapse: collapse;
+          "
+          align="center"
+        >
+          <tr class="bg_color row_border">
+            <td colspan="4">Please Print clearly</td>
+          </tr>
+          <tr>
+            <td>Your Last Name</td>
+            <td>First Name</td>
+            <td class="border_right">Middle Name</td>
+            <td class="bg_color">Social Security Number</td>
+          </tr>
+          <tr class="row_border input_box">
+            <td>
+              <input type="text" name="lastname" id="lastname" required />
+            </td>
+            <td>
+              <input type="text" name="firstname" id="firstname" required />
+            </td>
+            <td class="border_right">
+              <input type="text" name="middlename" id="middlename" required />
+            </td>
+            <td>
+              <input
+                type="text"
+                name="securityNumber"
+                id="securityNumber"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" class="border_right">Address</td>
+
+            <td class="bg_color">Sex</td>
+          </tr>
+          <tr class="row_border input_box">
+            <td colspan="3" class="border_right">
+              <textarea
+                name="Address"
+                id="Address"
+                cols="10"
+                rows="3"
+                required
+              ></textarea>
+            </td>
+            <td>
+              <input
+                type="radio"
+                id="gender"
+                name="gender"
+                value="male"
+                checked
+              />
+              Male<br />
+              <input type="radio" id="gender" name="gender" value="female" />
+              Female<br />
+              <input type="radio" id="gender" name="gender" value="other" />
+              Other
+            </td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td>State</td>
+            <td class="border_right">ZIP</td>
+            <td class="bg_color">Date of Birth</td>
+          </tr>
+          <tr class="input_box row_border">
+            <td><input type="text" name="city" id="city" required /></td>
+            <td><input type="text" name="state" id="state" required /></td>
+            <td class="border_right">
+              <input type="text" name="zip" id="zip" required />
+            </td>
+            <td><input type="date" name="date" id="date" required /></td>
+          </tr>
+          <tr>
+            <td>Mobile</td>
+            <td>Email</td>
+            <td class="border_right">Medicare Claim number</td>
+            <td class="bg_color">Insurance Number</td>
+          </tr>
+          <tr class="input_box row_border">
+            <td><input type="text" name="mobile" id="mobile" required /></td>
+            <td><input type="email" name="email" id="email" required /></td>
+            <td class="border_right">
+              <input type="text" name="claim" id="claim" required />
+            </td>
+            <td>
+              <input type="text" name="insurance" id="insurance" required />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" align="center">
+              <input type="submit" value="Submit" />
+            </td>
+          </tr>
+        </table>
+      </form>
     </div>
-</body>
+  </body>
 </html>

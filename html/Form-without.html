@@ -1,130 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/mystyle.css">
-    <script src="../js/myscript.js" type="text/javascript" ></script>
+    <link rel="stylesheet" href="../css/mystyle.css" />
+    <script src="../js/myscript.js" type="text/javascript"></script>
     <script>
-            document.addEventListener("DOMContentLoaded", function(event) {
-              console.log("DOM fully loaded and parsed");
-            });
-          
-          for(var i=0; i<1000000000; i++)
-          {} // this synchronous script is going to delay parsing of the DOM. So the DOMContentLoaded event is going to launch later.
-          </script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        console.log("DOM fully loaded and parsed");
+      });
+
+      for (var i = 0; i < 1000000000; i++) {} // this synchronous script is going to delay parsing of the DOM. So the DOMContentLoaded event is going to launch later.
+    </script>
     <style>
-        .bg_color
-        {
-            background-color:orange;
-        }
-        .row_border
-        {
-            border-bottom: 4px solid  #705984;
-        }
-        .column
-        {
-            display: inline-block;
-            font-size: 1em;
-            padding: 1% 0.5% 0.5% 0.5%;
-        }
-        .row
-        {
-        
-        }
-        .width-25
-        {
-            width: 25%;
-        }
-        .width-75
-        {
-            width:75%;
-        }
-        .input-box
-        {
-            font-size: 0.8em;
-            border-bottom: 2px solid black;
-            border-top: transparent;
-            border-left: transparent;
-            border-right: transparent;
-            width: 90%;
-        }
-        .border_right
-        {
-            border-right:4px solid  #705984;
-        }
+      .bg_color {
+        background-color: orange;
+      }
+      .row_border {
+        border-bottom: 4px solid #705984;
+      }
+      .column {
+        display: inline-block;
+        font-size: 1em;
+        padding: 1% 0.5% 0.5% 0.5%;
+      }
+      .width-25 {
+        width: 25%;
+      }
+      .width-75 {
+        width: 75%;
+      }
+      .input-box {
+        font-size: 0.8em;
+        border-bottom: 2px solid black;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        width: 90%;
+      }
+      .border_right {
+        border-right: 4px solid #705984;
+      }
     </style>
-</head>
-<body style="margin:0% 3% 0% 3%;color: #705984;background-color:antiquewhite;width: 100vw;height: 100vh;">
-    <div style="text-align:center;padding:2% 2% 5% 0;font-size:4em;font-weight: bold;">
-        Application Form
+  </head>
+  <body
+    style="
+      margin: 0% 3% 0% 3%;
+      color: #705984;
+      background-color: antiquewhite;
+      width: 100vw;
+      height: 100vh;
+    "
+  >
+    <div
+      style="
+        text-align: center;
+        padding: 2% 2% 5% 0;
+        font-size: 4em;
+        font-weight: bold;
+      "
+    >
+      Application Form
     </div>
     <form name="myform" id="myform" onsubmit="showinconsole();">
-        <div style="text-align:left;font-size:1.5em;width:80%;margin: auto;">
-            <div class="row bg_color row_border">
-                <div class="column">Please Print clearly</div>
-            </div>
-            <div>
-                <div class="column width-25">Your Last Name</div><div class="column width-25">
-                    First Name</div><div class="column width-25 border_right">
-                    Middle Name</div><div class="column width-25 bg_color">
-                    Social Security Number</div>
-            </div>
-            <div class="row_border">
-                <div class="column width-25">
-                    <input class="input-box" type="text" name="lastname" id="lastname" required /></div><div class="column width-25">
-                    <input class="input-box" type="text" name="firstname" id="firstname" required /></div><div class="column width-25 border_right">
-                    <input class="input-box" type="text" name="middlename" id="middlename" required /></div><div class="column width-25">
-                    <input class="input-box" type="text" name="securityNumber" id="securityNumber" required /></div>
-            </div>
-            <div>
-                <div class="column width-75 border_right">
-                    Address</div><div class="column width-25 bg_color">
-                    Sex</div>
-            </div>
-            <div class="row_border"> 
-                <div class="column width-75 border_right"> 
-                    <textarea class="input-box" name="Address" id="Address" cols="10" rows="3" required ></textarea></div><div style="font-size: 0.9em" class="column width-25">  
-                        <input type="radio" id="gender" name="gender" value="male" checked> Male<br>
-                        <input type="radio" id="gender" name="gender" value="female"> Female<br>
-                        <input type="radio" id="gender" name="gender" value="other"> Other  
-                    </div>
-            </div>
-            <div>
-                <div class="column width-25">City</div><div class="column width-25">
-                    State</div><div class="column width-25 border_right">
-                    ZIP</div><div class="column width-25 bg_color">
-                    Date of Birth</div>
-            </div>
-            <div class="row_border">
-                <div class="column width-25">
-                    <input class="input-box" type="text" name="city" id="city" required /></div><div class="column width-25">
-                    <input class="input-box" type="text" name="state" id="state" required /></div><div class="column width-25 border_right">
-                    <input class="input-box" type="text" name="zip" id="zip" required /></div><div class="column width-25">
-                    <input class="input-box" type="date" name="date" id="date" required /></div>
-            </div>
-            <div>
-                    <div class="column width-25">
-                        Mobile</div><div class="column width-25">
-                        Email</div><div class="column width-25 border_right">
-                        Medicare Claim number</div><div class="column width-25 bg_color">
-                        Insurance Number</div>
-            </div>
-            <div class="input_box row_border"> 
-                <div class="column width-25">
-                    <input class="input-box" type="text" name="mobile" id="mobile" required /></div><div class="column width-25">
-                    <input class="input-box" type="email" name="email" id="email" required /></div><div class="column width-25 border_right">
-                    <input class="input-box" type="text" name="claim" id="claim" required /></div><div class="column width-25 bg_color">
-                    <input class="input-box" type="text" name="insurance" id="insurance"required /></div>
-            </div>
-            <div>
-                    <div align="center">
-                    <input type="submit" value="Submit"></div>   
-            </div>
+      <div style="text-align: left; font-size: 1.5em; width: 80%; margin: auto">
+        <div class="row bg_color row_border">
+          <div class="column">Please Print clearly</div>
         </div>
+        <div>
+          <div class="column width-25">Your Last Name</div>
+          <div class="column width-25">First Name</div>
+          <div class="column width-25 border_right">Middle Name</div>
+          <div class="column width-25 bg_color">Social Security Number</div>
+        </div>
+        <div class="row_border">
+          <div class="column width-25">
+            <input
+              class="input-box"
+              type="text"
+              name="lastname"
+              id="lastname"
+              required
+            />
+          </div>
+          <div class="column width-25">
+            <input
+              class="input-box"
+              type="text"
+              name="firstname"
+              id="firstname"
+              required
+            />
+          </div>
+          <div class="column width-25 border_right">
+            <input
+              class="input-box"
+              type="text"
+              name="middlename"
+              id="middlename"
+              required
+            />
+          </div>
+          <div class="column width-25">
+            <input
+              class="input-box"
+              type="text"
+              name="securityNumber"
+              id="securityNumber"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <div class="column width-75 border_right">Address</div>
+          <div class="column width-25 bg_color">Sex</div>
+        </div>
+        <div class="row_border">
+          <div class="column width-75 border_right">
+            <textarea
+              class="input-box"
+              name="Address"
+              id="Address"
+              cols="10"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <div style="font-size: 0.9em" class="column width-25">
+            <input
+              type="radio"
+              id="gender"
+              name="gender"
+              value="male"
+              checked
+            />
+            Male<br />
+            <input type="radio" id="gender" name="gender" value="female" />
+            Female<br />
+            <input type="radio" id="gender" name="gender" value="other" /> Other
+          </div>
+        </div>
+        <div>
+          <div class="column width-25">City</div>
+          <div class="column width-25">State</div>
+          <div class="column width-25 border_right">ZIP</div>
+          <div class="column width-25 bg_color">Date of Birth</div>
+        </div>
+        <div class="row_border">
+          <div class="column width-25">
+            <input
+              class="input-box"
+              type="text"
+              name="city"
+              id="city"
+              required
+            />
+          </div>
+          <div class="column width-25">
+            <input
+              class="input-box"
+              type="text"
+              name="state"
+              id="state"
+              required
+            />
+          </div>
+          <div class="column width-25 border_right">
+            <input class="input-box" type="text" name="zip" id="zip" required />
+          </div>
+          <div class="column width-25">
+            <input
+              class="input-box"
+              type="date"
+              name="date"
+              id="date"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <div class="column width-25">Mobile</div>
+          <div class="column width-25">Email</div>
+          <div class="column width-25 border_right">Medicare Claim number</div>
+          <div class="column width-25 bg_color">Insurance Number</div>
+        </div>
+        <div class="input_box row_border">
+          <div class="column width-25">
+            <input
+              class="input-box"
+              type="text"
+              name="mobile"
+              id="mobile"
+              required
+            />
+          </div>
+          <div class="column width-25">
+            <input
+              class="input-box"
+              type="email"
+              name="email"
+              id="email"
+              required
+            />
+          </div>
+          <div class="column width-25 border_right">
+            <input
+              class="input-box"
+              type="text"
+              name="claim"
+              id="claim"
+              required
+            />
+          </div>
+          <div class="column width-25 bg_color">
+            <input
+              class="input-box"
+              type="text"
+              name="insurance"
+              id="insurance"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <div align="center">
+            <input type="submit" value="Submit" />
+          </div>
+        </div>
+      </div>
     </form>
-    
-</body>
+  </body>
 </html>

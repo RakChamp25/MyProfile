@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-        table
-        {
-            width: 30%;
-            padding: 2% 2% 2% 2%;
-        }
+      table {
+        width: 30%;
+        padding: 2% 2% 2% 2%;
+      }
     </style>
     <script type="text/javascript">
-   
-        createTable = function() {
-            x();
-             function x()
-            {
-                alert('hi')
-            }
+      createTable = function () {
         x();
-            document.getElementById("btn").style.display= "none";
-            var row, col, text;
-            var obj = { 
-                "First name ": "Ajith Kannan", 
-                "Last name ": "Rajapandi" , 
-                "Age ":" 21" , 
-                "Sex":"Male" , 
-                "Date of Birth" : "25/08/1997"  ,
-                "Mobile" : "7871107813" ,
-                "Email" : "ajithkannan.r@zohocorp.com"    
-                };
-            var table = document.createElement("TABLE");
-            table.setAttribute("border","3px");
-            table.setAttribute("align","center");
-            
-            document.body.appendChild(table);
-            for (var prop in obj) {
-                row = document.createElement("TR");
-                col = document.createElement("TD");
-                text = document.createTextNode(prop);
-                col.appendChild(text);
-                row.appendChild(col);
-
-                col = document.createElement("TD");
-                text = document.createTextNode(obj[prop]);
-                col.appendChild(text);
-                row.appendChild(col);
-                table.appendChild(row);
-            }
+        function x() {
+          alert("hi");
         }
+        x();
+        document.getElementById("btn").style.display = "none";
+        var row, col, text;
+        var obj = {
+          "First name ": "Ajith Kannan",
+          "Last name ": "Rajapandi",
+          "Age ": " 21",
+          Sex: "Male",
+          "Date of Birth": "25/08/1997",
+          Mobile: "7871107813",
+          Email: "ajithkannan.r@zohocorp.com",
+        };
+        var table = document.createElement("TABLE");
+        table.setAttribute("border", "3px");
+        table.setAttribute("align", "center");
+
+        document.body.appendChild(table);
+        for (var prop in obj) {
+          row = document.createElement("TR");
+          col = document.createElement("TD");
+          text = document.createTextNode(prop);
+          col.appendChild(text);
+          row.appendChild(col);
+
+          col = document.createElement("TD");
+          text = document.createTextNode(obj[prop]);
+          col.appendChild(text);
+          row.appendChild(col);
+          table.appendChild(row);
+        }
+      };
     </script>
-</head>
+  </head>
 
-<body>
-    <button type="button" id="btn" onclick="createTable();">Show Profile</button>
-</body>
-
+  <body>
+    <button type="button" id="btn" onclick="createTable();">
+      Show Profile
+    </button>
+  </body>
 </html>

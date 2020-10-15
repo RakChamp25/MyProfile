@@ -1,175 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"> -->
-    <link rel="stylesheet" href="../css/mystyle.css">
-    <script src="../js/myscript.js" type="text/javascript" ></script>
-</head>
+    <link rel="stylesheet" href="../css/mystyle.css" />
+    <script src="../js/myscript.js" type="text/javascript"></script>
+  </head>
 
-<body onload="close_view_modals();" class="b">
-    <div style="min-height:100vh">
-        
-        <div name="about" id="about">
-            
-            <div name="imageDiv" id="imageDiv" onclick="show_modal_image();">
-                <img src="../image/IMG_20180621_090150153_HDR.jpg" width='80%'; alt="Avatar">
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div class="aboutMe">
-            About Me
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div class="description">
-                <br>
-                Hi, i am Ajith Kannan. My rules are very simple.
-                <dl>
-                    <dt>
-                        Rule 1 :
-                    </dt>
-                    <dd>
-                        <ul>
-                            <li>Keep trying untill you reach your goal.</li>
-                        </ul>
-                    </dd>
-                    <dt>
-                        Rule 2 :
-                    </dt>
-                    <dd>
-                        <ul>
-                            <li>If you failed, follow the rule one again :-)</li>
-                        </ul>
-                    </dd>
-                </dl>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <a href="about.html">
-            <div class="knowmore" >
-                    <img  class="knowmore-img" src="../image/knowmore.png" width="25px;">
-                    <div class="knowmore-txt" >
-                            Know More
-                    </div>
-            </div>
-            <a href="form.html"><button type="button"></button></a>
-        </a>
+  <body onload="close_view_modals();" class="b">
+    <div style="min-height: 100vh">
+      <div name="about" id="about">
+        <div name="imageDiv" id="imageDiv" onclick="show_modal_image();">
+          <img
+            src="../image/IMG_20180621_090150153_HDR.jpg"
+            width="80%"
+            ;
+            alt="Avatar"
+          />
         </div>
-        <div name="content" id="content">
-            <table class="modal_table" cellpadding="15" cellspacing="15" >
-                <tr>
-                    <td>
-                        <div class="modal" onclick="show_profile();">
-                            <div class="modal-text">
-                                Profile
-                            </div>
-                        </div> 
-                    </td>
-                    <td>
-                        <div class="modal" onclick="show_academics();">
-                            <div class="modal-text">
-                                Academics
-                            </div>
-                        </div> 
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="modal" onclick="show_acheivements();">
-                            <div class="modal-text">
-                                Acheivements
-                            </div>
-                        </div> 
-                    </td>
-                    <td>
-                        <div class="modal" onclick="show_projects();">
-                            <div class="modal-text">
-                                Projects
-                            </div>
-                        </div> 
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="modal" onclick="show_acheivements();">
-                            <div class="modal-text">
-                                Acheivements
-                            </div>
-                        </div> 
-                    </td>
-                    <td>
-                        <div class="modal" onclick="show_projects();">
-                            <div class="modal-text">
-                                Projects
-                            </div>
-                        </div> 
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="modal" onclick="show_acheivements();">
-                            <div class="modal-text">
-                                Acheivements
-                            </div>
-                        </div> 
-                    </td>
-                    <td>
-                        <div class="modal" onclick="show_projects();">
-                            <div class="modal-text">
-                                Projects
-                            </div>
-                        </div> 
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="modal" onclick="show_acheivements();">
-                            <div class="modal-text">
-                                Acheivements
-                            </div>
-                        </div> 
-                    </td>
-                    <td>
-                        <div class="modal" onclick="show_projects();">
-                            <div class="modal-text">
-                                Projects
-                            </div>
-                        </div> 
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="modal" onclick="show_acheivements();">
-                            <div class="modal-text">
-                                Acheivements
-                            </div>
-                        </div> 
-                    </td>
-                    <td>
-                        <div class="modal" onclick="show_projects();">
-                            <div class="modal-text">
-                                Projects
-                            </div>
-                        </div> 
-                    </td>
-                </tr>
-
-            </table>
-        </div>   
-        <div class="modal-view" name="modal_view_tag" id="modal_view_tag">
-                <div class="close"  onclick="close_view_modals();">
-                </div>
-                <div name="modal-content" id="modal-content">
-                </div>
-         </div>
+        <div>
+          <hr />
+        </div>
+        <div class="aboutMe">About Me</div>
+        <div>
+          <hr />
+        </div>
+        <div class="description">
+          <br />
+          Hi, i am Ajith Kannan. My rules are very simple.
+          <dl>
+            <dt>Rule 1 :</dt>
+            <dd>
+              <ul>
+                <li>Keep trying untill you reach your goal.</li>
+              </ul>
+            </dd>
+            <dt>Rule 2 :</dt>
+            <dd>
+              <ul>
+                <li>If you failed, follow the rule one again :-)</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <div>
+          <hr />
+        </div>
+        <a href="about.html">
+          <div class="knowmore">
+            <img
+              class="knowmore-img"
+              src="../image/knowmore.png"
+              width="25px;"
+            />
+            <div class="knowmore-txt">Know More</div>
+          </div>
+          <a href="form.html"><button type="button"></button></a>
+        </a>
+      </div>
+      <div name="content" id="content">
+        <table class="modal_table" cellpadding="15" cellspacing="15">
+          <tr>
+            <td>
+              <div class="modal" onclick="show_profile();">
+                <div class="modal-text">Profile</div>
+              </div>
+            </td>
+            <td>
+              <div class="modal" onclick="show_academics();">
+                <div class="modal-text">Academics</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="modal" onclick="show_acheivements();">
+                <div class="modal-text">Acheivements</div>
+              </div>
+            </td>
+            <td>
+              <div class="modal" onclick="show_projects();">
+                <div class="modal-text">Projects</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="modal" onclick="show_acheivements();">
+                <div class="modal-text">Acheivements</div>
+              </div>
+            </td>
+            <td>
+              <div class="modal" onclick="show_projects();">
+                <div class="modal-text">Projects</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="modal" onclick="show_acheivements();">
+                <div class="modal-text">Acheivements</div>
+              </div>
+            </td>
+            <td>
+              <div class="modal" onclick="show_projects();">
+                <div class="modal-text">Projects</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="modal" onclick="show_acheivements();">
+                <div class="modal-text">Acheivements</div>
+              </div>
+            </td>
+            <td>
+              <div class="modal" onclick="show_projects();">
+                <div class="modal-text">Projects</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="modal" onclick="show_acheivements();">
+                <div class="modal-text">Acheivements</div>
+              </div>
+            </td>
+            <td>
+              <div class="modal" onclick="show_projects();">
+                <div class="modal-text">Projects</div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-view" name="modal_view_tag" id="modal_view_tag">
+        <div class="close" onclick="close_view_modals();"></div>
+        <div name="modal-content" id="modal-content"></div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
