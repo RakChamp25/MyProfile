@@ -47,6 +47,10 @@ body.b
     background-color: #3e0912;
     
 }
+dd {
+  margin-inline-start: 0;
+  font-size: 12px;
+}
 img {
     padding: 1%;
     border-radius: 10%;
@@ -80,7 +84,7 @@ hr::after {
     background: #440311;
 }
  .aboutMe{
-  font-family: cursive;
+  font-family: 'Silkscreen', cursive;
   text-align: center;
   color: wheat;
   font-size: 1 em;
@@ -100,7 +104,8 @@ hr::after {
 }
 .modal-text
 {
-    font-family: cursive;
+    font-family: 'Silkscreen', cursive;
+    margin-top: 30%;
     text-align: center;
     font-size: 30px;
 }
@@ -160,7 +165,7 @@ hr::after {
       font-size: 1.5em;
       color: wheat;
       margin: 10%;
-      font-family: 'Tangerine',cursive;
+      font-family: 'Silkscreen', cursive;
   }
 
 b
