@@ -1,215 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/mystyle.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooltip Scroll Page</title>
 
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* 🌅 Background + global styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(120deg, #e7d0b3, #f3ede3);
+      color: #3a2c1e;
+      overflow: hidden;
+    }
+
+    /* 🖼 Floating icon */
+    img.logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 50px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 10;
+    }
+
+    img.logo:hover {
+      transform: scale(1.2);
+    }
+
+    /* 📜 Scrollable content box */
+    .scroll-box {
+      background-image: url("https://i.pinimg.com/originals/52/74/72/52747211a2e2222cddc35e75b8dd10b3.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      width: 70vw;
+      margin: 0 auto;
+      margin-top: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      padding: 40px;
+    }
+
+    /* ✨ Text cards */
+    .rect-text {
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 12px;
+      margin: 30px 0;
+      padding: 25px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    .rect-text:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 🔮 Tooltip effect */
+    strong[data-title] {
+      position: relative;
+      cursor: help;
+      transition: color 0.3s;
+    }
+
+    strong[data-title]::after {
+      content: attr(data-title);
+      position: absolute;
+      bottom: 130%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.85em;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    strong[data-title]:hover {
+      color: #a83232;
+      text-shadow: 0 0 10px rgba(255, 100, 100, 0.6);
+    }
+
+    strong[data-title]:hover::after {
+      opacity: 1;
+      transform: translate(-50%, -5px);
+    }
+
+    /* 🌿 Scrollbar style */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f3e1c7;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #8b4513;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a0522d;
+    }
+
+    /* 🎞 Animation */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 🧭 Responsive tweaks */
+    @media (max-width: 768px) {
+      .scroll-box {
+        width: 90vw;
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 
-<strongody class="b">
+<body>
+  <!-- 🔗 Floating Icon -->
+  <img class="logo"
+       src="http://www.stickpng.com/assets/thumbs/588a672cd06f6719692a2d21.png"
+       alt="Icon">
 
-   
-    <div style="background-image: url('../image/Light-Brown-Backgrounds.jpg');height:100vh;width:70vw;position: absolute;overflow:scroll;margin:0%;">
+  <!-- 🧾 Scrollable Section -->
+  <div class="scroll-box">
 
-        <div class="rect-text">
-            <div class="rect-smilie">
-        </div>
-            Lorem, ipsum domme dolor sit amet consectetur adipisicing elit. Eum, eius exercitationem. Maxime ab sequi
-            expedita laboriosam eos explicabo et blanditiis voluptatum id tenetur quam, quos eaque quaerat magni! Nisi,
-            illum! Lorem ipsum dolor sit <strong class="tooltip-top" data-title="hover top">
-                Tool tip top </strong> amet consectetur adipisicing elite. Animi accusamus aliquid, fugiat autem
-            explicabo reiciendis molestiae tempore <strong class="tooltip-bottom" data-title="hover bottom">Tool
-                tip bottom</strong>repellendus unde ullam quisquam eveniet voluptatem quae iste fuga in
-            et aperiam nemo eligendi natus, ea nulla praesentium! Delectus quis, tenetur perspiciatis rerum perferendis
-            sequi minus nam deleniti nulla alias uam nihil laudantium rerum modi Ex iste e <strong class="tooltip-left"
-                data-title="hover left">Tool tip left</strong>exercitationem quae eum corrupti voluptatem eveniet aspernatur
-            doloribus architecto nemo aperiam? Ex iste enim suscipit exercitationem quam nihil laudantium rerum modi Ex
-            iste enim suscipit exercitationem quam nihil laudantium rerum modi
-            soluta voluptas odit molestiae illum iure culpa porro aspernatur sit consequatur, fugit aperiam! Nihil
-            assumenda, iusto officia, <strong class="tooltip-right" data-title="hover right">Tool
-                tip right </strong>repudiandae asperiores commodi eligendi fuga totam impedit numquam animi. Nisi
-            omnis voluptas sit cum deserunt.
-
-        </div>
-
-        <div>
-            <a href="index.html">
-                <img
-                    src="http://www.stickpng.com/assets/thumbs/588a672cd06f6719692a2d21.png"
-                    width="5%"
-                    style="margin-top:2%;margin-left:2%;position: fixed;top:-50px;"
-                    alt="img"
-                >
-            </a>
-        </div>
-        <strongr>
-        <strongr>
-        <strongr>
-        <div class="rect-text">
-            <div class="rect-smilie">
-            </div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, eius exercitationem. Maxime ab sequi
-            expedita laboriosam eos explicabo et blanditiis voluptatum id tenetur quam, quos eaque quaerat magni! Nisi,
-            illum! Lorem ipsum dolor sit <strong class="tooltip-top" data-title="hover top">
-                Tool tip top </strong> amet consectetur adipisicing elit. Animi accusamus aliquid, fugiat autem
-            explicabo reiciendis molestiae tempore <strong class="tooltip-bottom" data-title="hover bottom">Tool
-                tip bottom</strong>repellendus unde ullam quisquam eveniet voluptatem quae iste fuga in
-            et aperiam nemo eligendi natus, ea nulla praesentium! Delectus quis, tenetur perspiciatis rerum perferendis
-            sequi minus nam deleniti nulla alias uam nihil laudantium rerum modi Ex iste e <strong class="tooltip-left"
-                data-title="hover left">Tool tip left</strong>exercitationem quae eum corrupti voluptatem eveniet aspernatur
-            doloribus architecto nemo aperiam? Ex iste enim suscipit exercitationem quam nihil laudantium rerum modi Ex
-            iste enim suscipit exercitationem quam nihil laudantium rerum modi
-            soluta voluptas odit molestiae illum iure culpa porro aspernatur sit consequatur, fugit aperiam! Nihil
-            assumenda, iusto officia, <strong class="tooltip-right" data-title="hover right">Tool
-                tip right </strong>repudiandae asperiores commodi eligendi fuga totam impedit numquam animi. Nisi
-            omnis voluptas sit cum deserunt.
-
-        </div>
-        <strongr>
-        <strongr>
-        <strongr>
-        <div class="rect-text">
-            <div class="rect-smilie">
-            </div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, eius exercitationem. Maxime ab sequi
-            expedita laboriosam eos explicabo et blanditiis voluptatum id tenetur quam, quos eaque quaerat magni! Nisi,
-            illum! Lorem ipsum dolor sit <strong class="tooltip-top" data-title="hover top">
-                Tool tip top </strong> amet consectetur adipisicing elit. Animi accusamus aliquid, fugiat autem
-            explicabo reiciendis molestiae tempore <strong class="tooltip-bottom" data-title="hover bottom">Tool
-                tip bottom</strong>repellendus unde ullam quisquam eveniet voluptatem quae iste fuga in
-            et aperiam nemo eligendi natus, ea nulla praesentium! Delectus quis, tenetur perspiciatis rerum perferendis
-            sequi minus nam deleniti nulla alias uam nihil laudantium rerum modi Ex iste e <strong class="tooltip-left"
-                data-title="hover left">Tool tip left</strong>exercitationem quae eum corrupti voluptatem eveniet aspernatur
-            doloribus architecto nemo aperiam? Ex iste enim suscipit exercitationem quam nihil laudantium rerum modi Ex
-            iste enim suscipit exercitationem quam nihil laudantium rerum modi
-            soluta voluptas odit molestiae illum iure culpa porro aspernatur sit consequatur, fugit aperiam! Nihil
-            assumenda, iusto officia, <strong class="tooltip-right" data-title="hover right">Tool
-                tip right </strong>repudiandae asperiores commodi eligendi fuga totam impedit numquam animi. Nisi
-            omnis voluptas sit cum deserunt.
-
-        </div>
-        <strongr>
-        <strongr>
-        <strongr>
-        <div class="rect-text">
-            <div class="rect-smilie">
-            </div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, eius exercitationem. Maxime ab sequi
-            expedita laboriosam eos explicabo et blanditiis voluptatum id tenetur quam, quos eaque quaerat magni! Nisi,
-            illum! Lorem ipsum dolor sit <strong class="tooltip-top" data-title="hover top">
-                Tool tip top </strong> amet consectetur adipisicing elit. Animi accusamus aliquid, fugiat autem
-            explicabo reiciendis molestiae tempore <strong class="tooltip-bottom" data-title="hover bottom">Tool
-                tip bottom</strong>repellendus unde ullam quisquam eveniet voluptatem quae iste fuga in
-            et aperiam nemo eligendi natus, ea nulla praesentium! Delectus quis, tenetur perspiciatis rerum perferendis
-            sequi minus nam deleniti nulla alias uam nihil laudantium rerum modi Ex iste e <strong class="tooltip-left"
-                data-title="hover left">Tool tip left</strong>exercitationem quae eum corrupti voluptatem eveniet aspernatur
-            doloribus architecto nemo aperiam? Ex iste enim suscipit exercitationem quam nihil laudantium rerum modi Ex
-            iste enim suscipit exercitationem quam nihil laudantium rerum modi
-            soluta voluptas odit molestiae illum iure culpa porro aspernatur sit consequatur, fugit aperiam! Nihil
-            assumenda, iusto officia, <strong class="tooltip-right" data-title="hover right">Tool
-                tip right </strong>repudiandae asperiores commodi eligendi fuga totam impedit numquam animi. Nisi
-            omnis voluptas sit cum deserunt.
-
-        </div>
-        <strongr>
-        <strongr>
-        <strongr>
-        <div class="rect-text">
-            <div class="rect-smilie">
-            </div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, eius exercitationem. Maxime ab sequi
-            expedita laboriosam eos explicabo et blanditiis voluptatum id tenetur quam, quos eaque quaerat magni! Nisi,
-            illum! Lorem ipsum dolor sit <strong class="tooltip-top" data-title="hover top">
-                Tool tip top </strong> amet consectetur adipisicing elit. Animi accusamus aliquid, fugiat autem
-            explicabo reiciendis molestiae tempore <strong class="tooltip-bottom" data-title="hover bottom">Tool
-                tip bottom</strong>repellendus unde ullam quisquam eveniet voluptatem quae iste fuga in
-            et aperiam nemo eligendi natus, ea nulla praesentium! Delectus quis, tenetur perspiciatis rerum perferendis
-            sequi minus nam deleniti nulla alias uam nihil laudantium rerum modi Ex iste e <strong class="tooltip-left"
-                data-title="hover left">Tool tip left</strong>exercitationem quae eum corrupti voluptatem eveniet aspernatur
-            doloribus architecto nemo aperiam? Ex iste enim suscipit exercitationem quam nihil laudantium rerum modi Ex
-            iste enim suscipit exercitationem quam nihil laudantium rerum modi
-            soluta voluptas odit molestiae illum iure culpa porro aspernatur sit consequatur, fugit aperiam! Nihil
-            assumenda, iusto officia, <strong class="tooltip-right" data-title="hover right">Tool
-                tip right </strong>repudiandae asperiores commodi eligendi fuga totam impedit numquam animi. Nisi
-            omnis voluptas sit cum deserunt.
-
-        </div>
-        <strongr>
-        <strongr>
-        <strongr>
-        <div class="rect-text">
-            <div class="rect-smilie">
-            </div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, eius exercitationem. Maxime ab sequi
-            expedita laboriosam eos explicabo et blanditiis voluptatum id tenetur quam, quos eaque quaerat magni! Nisi,
-            illum! Lorem ipsum dolor sit <strong class="tooltip-top" data-title="hover top">
-                Tool tip top </strong> amet consectetur adipisicing elit. Animi accusamus aliquid, fugiat autem
-            explicabo reiciendis molestiae tempore <strong class="tooltip-bottom" data-title="hover bottom">Tool
-                tip bottom</strong>repellendus unde ullam quisquam eveniet voluptatem quae iste fuga in
-            et aperiam nemo eligendi natus, ea nulla praesentium! Delectus quis, tenetur perspiciatis rerum perferendis
-            sequi minus nam deleniti nulla alias uam nihil laudantium rerum modi Ex iste e <strong class="tooltip-left"
-                data-title="hover left">Tool tip left</strong>exercitationem quae eum corrupti voluptatem eveniet aspernatur
-            doloribus architecto nemo aperiam? Ex iste enim suscipit exercitationem quam nihil laudantium rerum modi Ex
-            iste enim suscipit exercitationem quam nihil laudantium rerum modi
-            soluta voluptas odit molestiae illum iure culpa porro aspernatur sit consequatur, fugit aperiam! Nihil
-            assumenda, iusto officia, <strong class="tooltip-right" data-title="hover right">Tool
-                tip right </strong>repudiandae asperiores commodi eligendi fuga totam impedit numquam animi. Nisi
-            omnis voluptas sit cum deserunt.
-
-        </div>
-        <strongr>
-        <strongr>
-        <strongr>
-        <div class="rect-text">
-            <div class="rect-smilie">
-            </div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, eius exercitationem. Maxime ab sequi
-            expedita laboriosam eos explicabo et blanditiis voluptatum id tenetur quam, quos eaque quaerat magni! Nisi,
-            illum! Lorem ipsum dolor sit <strong class="tooltip-top" data-title="hover top">
-                Tool tip top </strong> amet consectetur adipisicing elit. Animi accusamus aliquid, fugiat autem
-            explicabo reiciendis molestiae tempore <strong class="tooltip-bottom" data-title="hover bottom">Tool
-                tip bottom</strong>repellendus unde ullam quisquam eveniet voluptatem quae iste fuga in
-            et aperiam nemo eligendi natus, ea nulla praesentium! Delectus quis, tenetur perspiciatis rerum perferendis
-            sequi minus nam deleniti nulla alias uam nihil laudantium rerum modi Ex iste e <strong class="tooltip-left"
-                data-title="hover left">Tool tip left</strong>exercitationem quae eum corrupti voluptatem eveniet aspernatur
-            doloribus architecto nemo aperiam? Ex iste enim suscipit exercitationem quam nihil laudantium rerum modi Ex
-            iste enim suscipit exercitationem quam nihil laudantium rerum modi
-            soluta voluptas odit molestiae illum iure culpa porro aspernatur sit consequatur, fugit aperiam! Nihil
-            assumenda, iusto officia, <strong class="tooltip-right" data-title="hover right">Tool
-                tip right </strong>repudiandae asperiores commodi eligendi fuga totam impedit numquam animi. Nisi
-            omnis voluptas sit cum deserunt.
-
-        </div>
-        <strongr>
-        <strongr>
-        <strongr>
-        <div class="rect-text">
-            <div class="rect-smilie">
-            </div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, eius exercitationem. Maxime ab sequi
-            expedita laboriosam eos explicabo et blanditiis voluptatum id tenetur quam, quos eaque quaerat magni! Nisi,
-            illum! Lorem ipsum dolor sit <strong class="tooltip-top" data-title="hover top">
-                Tool tip top </strong> amet consectetur adipisicing elit. Animi accusamus aliquid, fugiat autem
-            explicabo reiciendis molestiae tempore <strong class="tooltip-bottom" data-title="hover bottom">Tool
-                tip bottom</strong>repellendus unde ullam quisquam eveniet voluptatem quae iste fuga in
-            et aperiam nemo eligendi natus, ea nulla praesentium! Delectus quis, tenetur perspiciatis rerum perferendis
-            sequi minus nam deleniti nulla alias uam nihil laudantium rerum modi Ex iste e <strong class="tooltip-left"
-                data-title="hover left">Tool tip left</strong>exercitationem quae eum corrupti voluptatem eveniet aspernatur
-            doloribus architecto nemo aperiam? Ex iste enim suscipit exercitationem quam nihil laudantium rerum modi Ex
-            iste enim suscipit exercitationem quam nihil laudantium rerum modi
-            soluta voluptas odit molestiae illum iure culpa porro aspernatur sit consequatur, fugit aperiam! Nihil
-            assumenda, iusto officia, <strong class="tooltip-right" data-title="hover right">Tool
-                tip right </strong>repudiandae asperiores commodi eligendi fuga totam impedit numquam animi. Nisi
-            omnis voluptas sit cum deserunt.
-
-        </div>
-
+    <div class="rect-text">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero molestias eveniet ad iusto quaerat? Quod ratione dolorum repellat nam tempora laudantium modi quasi culpa nihil expedita cum, quibusdam corporis ut enim incidunt ea voluptatem impedit totam laborum in. Eos fugiat dolor perspiciatis quibusdam.
+      </p>
     </div>
 
-</body>
+    <div class="rect-text">
+      <p>
+        Hover over this <strong data-title="You discovered a tooltip!">text</strong>
+        to see a smooth tooltip animation powered by CSS alone.
+      </p>
+    </div>
 
+    <div class="rect-text">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolores dolor aspernatur nihil, cupiditate blanditiis enim assumenda unde similique voluptatibus veniam pariatur. 🌄
+      </p>
+    </div>
+
+    <div class="rect-text">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error quasi aliquam velit explicabo cumque numquam illum. Earum sit voluptatibus ullam fugit numquam soluta quae amet harum voluptatem sunt beatae molestiae voluptates quasi aspernatur placeat labore quaerat cumque, voluptate recusandae! Adipisci nam tempora iusto?
+      </p>
+    </div>
+
+  </div>
+</body>
 </html>
