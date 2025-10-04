@@ -288,6 +288,10 @@ b {
 
 }
 
+.knowmore-container {
+  text-decoration: none;
+}
+
 .knowmore {
   color: wheat;
   font-size: 2em;
